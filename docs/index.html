@@ -371,7 +371,7 @@ mkdir project <span class="k">&amp;&amp;</span> docker compose up -d</pre></div>
         localStorage.setItem("flowpilot.lang", lang);
       }
       const q = new URLSearchParams(location.search).get("lang");
-      const initial = q || localStorage.getItem("flowpilot.lang") || ((navigator.language || "").startsWith("fa") ? "fa" : "en");
+      const initial = q || localStorage.getItem("flowpilot.lang") || "fa"; // Persian first
       if (initial === "fa") apply("fa");
       btn.addEventListener("click", () => apply(document.documentElement.lang === "fa" ? "en" : "fa"));
       document.querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
