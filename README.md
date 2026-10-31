@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/logo.svg" width="84" height="84" alt="flowpilot logo" />
+<img src="docs/assets/banner.svg" alt="flowpilot: self-hosted, code-first workflow automation" width="100%">
 
 # flowpilot
 
