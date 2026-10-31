@@ -11,7 +11,7 @@ Public API::
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from flowpilot.context import StepContext
 from flowpilot.errors import (

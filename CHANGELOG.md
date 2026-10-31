@@ -6,6 +6,15 @@ project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-31
+
+### Changed
+- Raised the minimum versions of two runtime dependencies so a fresh install no longer resolves to older releases: `PyYAML>=6.0.3` and `feedparser>=6.0.14`.
+- Raised the minimum versions of the development tools (`pytest-asyncio>=1.4.0`, `pytest-cov>=7.1.0`, `respx>=0.23.1`); the test suite passes with them.
+- Project site: theme follows the system (auto/light/dark), warmer palette, accessibility fixes.
+
+No change to the engine, triggers or steps.
+
 ## [0.1.0] - 2026-10-08
 
 First public release.
