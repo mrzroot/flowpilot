@@ -63,7 +63,7 @@ jobs:
           /tmp/smoke/bin/flowpilot init /tmp/proj
           /tmp/smoke/bin/flowpilot -p /tmp/proj validate
           /tmp/smoke/bin/flowpilot -p /tmp/proj run hello
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist/
