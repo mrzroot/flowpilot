@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html data-portfolio-design="flowpilot" lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
 <meta name="theme-color" content="#090a14" media="(prefers-color-scheme: dark)">
@@ -158,8 +158,9 @@ html[data-theme] .k{color:var(--k)}html[data-theme] .s{color:var(--s)}html[data-
 html[data-theme] .copy{border-color:var(--line);background:color-mix(in srgb,var(--text) 6%,transparent);color:var(--text2)}
 html[data-theme] .copy:hover{background:color-mix(in srgb,var(--text) 12%,transparent)}
 </style>
-<link rel="preload" href="fonts/sora-400.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/sora-700.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="identity.css"><link rel="stylesheet" href="mx.css">
+<link rel="stylesheet" href="identity.css"><link rel="stylesheet" href="mx.css">
 <style id="mx-tokens">:root{--mx-acc:var(--accent);--mx-on-acc:#fff;--mx-fg:var(--text);--mx-mut:var(--muted);--mx-card:var(--card);--mx-line:var(--line)}html[data-theme=dark]{--mx-on-acc:#14123a}@media (prefers-color-scheme:dark){html:not([data-theme]){--mx-on-acc:#14123a}}.mx-sec>h2{font-family:Sora,system-ui,sans-serif}</style>
+<link rel="stylesheet" href="portfolio-reframe.css">
 </head>
 <body>
   <nav>
@@ -179,7 +180,21 @@ html[data-theme] .copy:hover{background:color-mix(in srgb,var(--text) 12%,transp
     </div>
   </nav>
 
-  <div class="hero-bg">
+  
+<!-- Portfolio design: localized overview; original project sections remain below. -->
+<aside class="rr-signal">
+  <div class="rr-annotation"><p class="rr-product"><bdi>flowpilot</bdi><span><span class="rr-en" lang="en">Workflow automation</span><span class="rr-fa" lang="fa">خودکارسازی گردش کار</span></span></p>
+    <p class="rr-promise"><span class="rr-en" lang="en">Build and read your automations as code</span><span class="rr-fa" lang="fa">گردش‌های خودکار را مثل کد بسازید و بخوانید</span></p>
+    <a class="rr-start" href="#demo"><span class="rr-en" lang="en">Open the workflow demo</span><span class="rr-fa" lang="fa">باز کردن دموی گردش کار</span> <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="rr-visual" aria-hidden="true">
+    <svg viewBox="0 0 360 100" width="360" height="100" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M111 50h28m69 0h29m-65-10V23h65m-65 37v18h65" stroke-dasharray="4 4"/><path d="M52 36h59v28H52z"/><path d="m172 36 36 14-36 14-33-14z" fill="currentColor" fill-opacity=".22"/><path d="M237 12h53v22h-53zM237 39h53v22h-53zM237 67h53v22h-53z"/><circle cx="79" cy="50" r="6"/><path d="M251 23h23m-23 27h23m-23 28h23"/>
+    </svg>
+    <div class="rr-steps"><span><span class="rr-en" lang="en">Trigger</span><span class="rr-fa" lang="fa">محرک</span></span><span><span class="rr-en" lang="en">Route</span><span class="rr-fa" lang="fa">مسیریابی</span></span><span><span class="rr-en" lang="en">Run</span><span class="rr-fa" lang="fa">اجرا</span></span></div>
+  </div>
+</aside>
+<div class="hero-bg">
     <header class="hero wrap">
       <span class="pill"><b>v0.1.1</b> <span data-i18n="hero.pill">open source · MIT · Python 3.10+</span></span>
       <h1><span data-i18n="hero.h1a">Automations as code.</span><br /><span class="grad" data-i18n="hero.h1b">Tiny enough for a Raspberry Pi.</span></h1>
@@ -429,3 +444,4 @@ if(window.MutationObserver)new MutationObserver(sync).observe(d,{attributes:true
 <script src="mx.js" defer></script>
 </body>
 </html>
+
