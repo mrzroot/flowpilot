@@ -6,6 +6,8 @@ project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- Docs: Validate a workflow before serving.
+
 ## [0.1.1] - 2026-10-31
 
 ### Changed

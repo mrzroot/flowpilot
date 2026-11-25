@@ -30,6 +30,8 @@ and is configured with readable YAML (or Python).
 
 ### ⚡ Quickstart
 
+**Validate a workflow before serving.** Start in a fresh directory and validate the generated YAML before launching the dashboard.
+
 ```bash
 pipx install "git+https://github.com/mrzroot/flowpilot.git"
 flowpilot init my-automations && cd my-automations
