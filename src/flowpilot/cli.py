@@ -303,6 +303,31 @@ def steps(ctx: click.Context, as_json: bool) -> None:
         click.echo(f"{click.style(t.name, fg='cyan', bold=True):<30} {t.description}{src}")
 
 
+@cli.command("doctor")
+@click.option("--json", "as_json", is_flag=True, help="Output JSON.")
+@click.pass_context
+def doctor(ctx: click.Context, as_json: bool) -> None:
+    """Check flowpilot.yaml, workflows, referenced env vars, and security posture."""
+    from flowpilot.doctor import run_doctor
+
+    report = run_doctor(ctx.obj["project_dir"])
+    if as_json:
+        click.echo(json.dumps(report, indent=2))
+    else:
+        badge = click.style("OK", fg="green", bold=True) if report["ok"] else click.style("FAIL", fg="red", bold=True)
+        click.echo(f"flowpilot doctor [{badge}]  {report['project_dir']}")
+        click.echo(f"  workflows checked : {report['workflows_checked']}")
+        click.echo(f"  env present       : {', '.join(report['env_present']) or 'none'}")
+        if report["env_missing"]:
+            click.secho(f"  env missing       : {', '.join(report['env_missing'])}", fg="yellow")
+        for w in report["warnings"]:
+            click.secho(f"  warning           : {w}", fg="yellow")
+        for e in report["errors"]:
+            click.secho(f"  error             : {e}", fg="red")
+    if not report["ok"]:
+        sys.exit(1)
+
+
 def main() -> None:
     """Console-script entry point."""
     cli(obj={})

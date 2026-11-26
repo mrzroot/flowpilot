@@ -138,6 +138,7 @@ TELEGRAM_API_BASE=http://127.0.0.1:8081 TELEGRAM_BOT_TOKEN=test TELEGRAM_CHAT_ID
 | --- | --- |
 | `flowpilot init [DIR]` | Scaffold a project (`flowpilot.yaml`, `.env.example`, example workflows) |
 | `flowpilot validate` | Validate every workflow file; non-zero exit on errors (great for CI) |
+| `flowpilot doctor [--json]` | Audit `flowpilot.yaml`, YAML workflows, missing `env.*` vars, and security settings |
 | `flowpilot list` | Workflows with trigger, enabled state and last status |
 | `flowpilot run NAME [--payload JSON] [--json]` | Run a workflow once in the foreground |
 | `flowpilot serve [--host --port --no-triggers]` | Web server, dashboard, REST API and all triggers |

@@ -6,6 +6,12 @@ project uses [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-26
+
+### Added
+- `flowpilot doctor [--json]` command and `flowpilot.doctor.run_doctor` to audit `flowpilot.yaml`, workflow YAML syntax & steps, referenced `env.*` variables against `.env`/environment, and public-bind/`allow_shell` security posture.
+- Standalone test coverage in `tests/test_doctor.py`.
+
 ## [0.1.1] - 2026-10-31
 
 ### Changed
