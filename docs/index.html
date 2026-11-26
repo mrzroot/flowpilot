@@ -161,7 +161,7 @@ html[data-theme] .copy:hover{background:color-mix(in srgb,var(--text) 12%,transp
 <link rel="stylesheet" href="identity.css"><link rel="stylesheet" href="mx.css">
 <style id="mx-tokens">:root{--mx-acc:var(--accent);--mx-on-acc:#fff;--mx-fg:var(--text);--mx-mut:var(--muted);--mx-card:var(--card);--mx-line:var(--line)}html[data-theme=dark]{--mx-on-acc:#14123a}@media (prefers-color-scheme:dark){html:not([data-theme]){--mx-on-acc:#14123a}}.mx-sec>h2{font-family:Sora,system-ui,sans-serif}</style>
 <link rel="stylesheet" href="portfolio-reframe.css">
-<link rel="stylesheet" href="/assets/studio-mark.css"></head>
+<link rel="stylesheet" href="/assets/studio-mark.css"><link rel="stylesheet" href="/assets/portfolio/embed.css"><script defer src="/assets/portfolio/exhibit.js"></script></head>
 <body>
   <nav>
     <div class="wrap">
@@ -443,11 +443,32 @@ if(window.MutationObserver)new MutationObserver(sync).observe(d,{attributes:true
 <script src="fx.js" defer></script><script>/* keyboard access for horizontally scrollable code blocks */(function(){function f(){document.querySelectorAll('pre,.code,[id^=c-],#cmd,#c1,#t1').forEach(function(e){if(e.scrollWidth>e.clientWidth+1&&!e.hasAttribute('tabindex'))e.setAttribute('tabindex','0')})}addEventListener('load',f);addEventListener('resize',f);setTimeout(f,1500)})()</script>
 <script src="mx.js" defer></script>
 
-<aside class="studio-project-entry" style="--entry-color:#abcbff">
-  <img src="/assets/thumbs/flowpilot.webp" alt="" width="160" height="100" loading="lazy" decoding="async">
-  <div><strong>Stop duplicate workflow steps</strong><small>Track the incoming event ID</small></div>
-  <a href="/playground/?project=flowpilot&amp;lang=en">Try the case ↗</a>
-</aside>
+<div class="atlas-embedded" data-motif="route" style="--exhibit-hue:221"><section class="exhibit-studio" id="portfolio-example" data-project="flowpilot" data-motif="route" data-state="0" aria-labelledby="portfolio-example-title">
+    <div class="exhibit-studio-head"><div><p class="exhibit-kicker"><span class="pf-en" lang="en">Illustrative sample</span><span class="pf-fa" lang="fa">دادهٔ نمونه</span></p><h2 id="portfolio-example-title"><span class="pf-en" lang="en">Send the sample through a route</span><span class="pf-fa" lang="fa">نمونه را از یک مسیر عبور بده</span></h2></div>
+       <a href="/projects/guide/flowpilot/"><span class="pf-en" lang="en">Interactive introduction</span><span class="pf-fa" lang="fa">معرفی تعاملی</span> <i class="exhibit-arrow" aria-hidden="true"></i></a></div>
+    <div class="exhibit-lab">
+      <div class="stage-picture" aria-hidden="true">
+        <div class="stage-sign"><i></i><i></i><i></i><strong dir="ltr">flowpilot</strong></div>
+
+        <div class="stage-track" dir="ltr"></div>
+        <div class="stage-evidence" dir="ltr"><span dir="auto">Event 42</span><span dir="auto">Retry 42</span><span dir="auto">Notify?</span></div>
+      </div>
+      <div class="stage-work">
+        <p><span class="pf-en" lang="en">A sample Telegram event is delivered twice after a transient retry. Only one notification should be sent.</span><span class="pf-fa" lang="fa">رویداد نمونهٔ تلگرام پس از تلاش مجدد دوبار می‌رسد. فقط یک اعلان باید ارسال شود.</span></p>
+        <div class="stage-actions" role="group" aria-label="Example controls / کنترل‌های نمونه">
+          <button type="button" data-stage="1" aria-pressed="false"><span class="pf-en" lang="en">Track the incoming event ID</span><span class="pf-fa" lang="fa">شناسهٔ رویداد ورودی را ثبت کن</span><i class="exhibit-arrow" aria-hidden="true"></i></button><button type="button" data-stage="2" aria-pressed="false"><span class="pf-en" lang="en">Notify on every delivery</span><span class="pf-fa" lang="fa">با هر تحویل اعلان بفرست</span><i class="exhibit-arrow" aria-hidden="true"></i></button>
+        </div>
+        <output class="stage-result" aria-live="polite"><span class="pf-en" lang="en">Try a response to see its effect.</span><span class="pf-fa" lang="fa">یک کار را انتخاب کن و اثرش را ببین.</span></output>
+        <div class="stage-foot">
+          <button type="button" data-stage="0" aria-pressed="true"><span class="pf-en" lang="en">Reset example</span><span class="pf-fa" lang="fa">بازنشانی نمونه</span></button>
+
+        </div>
+      </div>
+    </div>
+   </section>
+    <p class="exhibit-takeaway"><span class="pf-en" lang="en">Start with a single event and its retry. Compare the event identifier and the number of emitted notifications.</span><span class="pf-fa" lang="fa">از یک رویداد و تحویل مجدد همان رویداد شروع کن. شناسهٔ رویداد و تعداد اعلان‌های خروجی را مقایسه کن.</span></p>
+    <script type="application/json" data-embed-project>{"entries":[{"id":"flowpilot","group":"systems","motif":"route","color":"#abcbff","title":["Stop duplicate workflow steps","اجرای تکراری گردش‌کار را متوقف کن"],"brief":["A sample Telegram event is delivered twice after a transient retry. Only one notification should be sent.","رویداد نمونهٔ تلگرام پس از تلاش مجدد دوبار می‌رسد. فقط یک اعلان باید ارسال شود."],"actions":[["Track the incoming event ID","شناسهٔ رویداد ورودی را ثبت کن"],["Notify on every delivery","با هر تحویل اعلان بفرست"]],"outcomes":[["The workflow recognizes the repeat and performs the notification once.","گردش‌کار تکرار را تشخیص می‌دهد و یک‌بار اعلان می‌فرستد."],["Two deliveries produce two notifications for the same event.","دو تحویل برای همان رویداد دو اعلان می‌سازد."]],"evidence":[["Event 42","Retry 42","Notify?"],["Event 42","Same ID","One notify"],["Event 42","Retry 42","Two notifications"]],"name":"flowpilot","kicker":["Workflow automation","خودکارسازی گردش‌کار"],"intro":["Describe a workflow in YAML, run it in a self-hosted service and inspect the live logs when a step fails.","گردش‌کار را با YAML تعریف و خودمیزبان اجرا کنید؛ اگر مرحله‌ای شکست خورد گزارش زنده را ببینید."],"hint":["Run a small workflow with a harmless failing step and inspect the run log to see exactly where it stopped.","یک گردش‌کار کوتاه با مرحله‌ای که عمداً و بی‌خطر خطا می‌دهد اجرا کنید و محل توقف را در گزارش ببینید."],"site":"/flowpilot/","source":"https://github.com/mrzroot/flowpilot","layout":"dashboard","hue":221,"image":"/assets/thumbs/flowpilot.webp"}],"labels":{"map":["Project Atlas","اطلس پروژه‌ها"],"mapIntro":["Four ways to explore the projects. Choose a project to see what it does and open its interactive introduction.","چهار مسیر برای گشتن میان پروژه‌ها. یکی را انتخاب کن تا ببینی چه کار می‌کند و معرفی تعاملی‌اش را باز کنی."],"agents":["AI tooling","ابزارهای هوش مصنوعی"],"language":["Language and data","زبان و داده"],"systems":["Systems","سامانه‌ها"],"showcase":["Design and demos","طراحی و دمو"],"projects":["All projects","همهٔ پروژه‌ها"],"open":["Interactive introduction","معرفی تعاملی"],"test":["Try the example","نمونه را امتحان کن"],"story":["The situation","مسئله"],"reference":["Inspect the project","بررسی پروژه"],"source":["View source on GitHub","کد منبع در گیت‌هاب"],"demo":["Open project website","باز کردن سایت پروژه"],"guide":["Suggested first step","قدم اول پیشنهادی"],"sample":["Illustrative sample","دادهٔ نمونه"],"result":["What happens","نتیجه"],"choose":["Try a response to see its effect.","یک کار را انتخاب کن و اثرش را ببین."],"still":["Initial state","حالت اولیه"],"reset":["Reset example","بازنشانی نمونه"],"more":["Explore another project","یک پروژهٔ دیگر ببین"]}}</script>
+  </div>
 </body>
 </html>
 
