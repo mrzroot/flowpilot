@@ -161,7 +161,7 @@ html[data-theme] .copy:hover{background:color-mix(in srgb,var(--text) 12%,transp
 <link rel="stylesheet" href="identity.css"><link rel="stylesheet" href="mx.css">
 <style id="mx-tokens">:root{--mx-acc:var(--accent);--mx-on-acc:#fff;--mx-fg:var(--text);--mx-mut:var(--muted);--mx-card:var(--card);--mx-line:var(--line)}html[data-theme=dark]{--mx-on-acc:#14123a}@media (prefers-color-scheme:dark){html:not([data-theme]){--mx-on-acc:#14123a}}.mx-sec>h2{font-family:Sora,system-ui,sans-serif}</style>
 <link rel="stylesheet" href="portfolio-reframe.css">
-</head>
+<link rel="stylesheet" href="/assets/studio-mark.css"></head>
 <body>
   <nav>
     <div class="wrap">
@@ -442,6 +442,12 @@ if(window.MutationObserver)new MutationObserver(sync).observe(d,{attributes:true
 /* normalise whatever the boot script set */apply(get(),false)})();</script>
 <script src="fx.js" defer></script><script>/* keyboard access for horizontally scrollable code blocks */(function(){function f(){document.querySelectorAll('pre,.code,[id^=c-],#cmd,#c1,#t1').forEach(function(e){if(e.scrollWidth>e.clientWidth+1&&!e.hasAttribute('tabindex'))e.setAttribute('tabindex','0')})}addEventListener('load',f);addEventListener('resize',f);setTimeout(f,1500)})()</script>
 <script src="mx.js" defer></script>
+
+<aside class="studio-project-entry" style="--entry-color:#abcbff">
+  <img src="/assets/thumbs/flowpilot.webp" alt="" width="160" height="100" loading="lazy" decoding="async">
+  <div><strong>Stop duplicate workflow steps</strong><small>Track the incoming event ID</small></div>
+  <a href="/playground/?project=flowpilot&amp;lang=en">Try the case ↗</a>
+</aside>
 </body>
 </html>
 
